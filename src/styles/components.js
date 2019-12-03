@@ -14,7 +14,7 @@ export const Viewport = styled.div`
 export const Wrapper = styled.div`
   width: 100%;
   display: contents;
-  min-height: fit-content;
+  min-height: 100%;
   /* border: 1px solid #f00; */
   /* padding: 10px; */
   /* background: rgba(0, 0, 0, 0.6); */
