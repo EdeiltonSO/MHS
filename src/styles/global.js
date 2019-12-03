@@ -11,14 +11,15 @@ const GlobalStyle = createGlobalStyle`
 
   html, body, #root {
     height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center
   }
 
   body {
     font-family: 'Calibri', sans-serif;
     background: rgb(25, 23, 37);
+    overflow: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
 
     h1, h2 {
       font-family: 'Segoe UI Light', sans-serif;

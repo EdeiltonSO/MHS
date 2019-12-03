@@ -2,21 +2,23 @@ import styled from "styled-components";
 
 export const Container = styled.div`
   width: 100%;
-  height: fit-content;
+  height: inherit;
   margin: 0 auto;
-  margin: 5px 5px 5px 10px;
-  padding: 10px;
-  background: rgb(40, 37, 53);
+  display: flex;
+  flex-direction: column;
+  /* margin: 5px 5px 5px 10px; */
+  padding: 20px 10px 20px 10px;
+  background: rgb(33, 30, 45);
   /* box-shadow: 0px 0px 7px rgba(0, 0, 0, 0.2); */
   /* border-radius: 5px; */
 
   h2 {
     color: rgb(134, 120, 194);
     line-height: 30px;
-    font-size: 18px;
+    font-size: 22px;
     text-transform: uppercase;
     text-align: center;
-    letter-spacing: 2px;
+    letter-spacing: 5px;
     margin-bottom: 5px;
   }
 
@@ -24,9 +26,9 @@ export const Container = styled.div`
     flex-direction: row;
     justify-content: space-between;
     display: flex;
-    margin-top: 7px;
+    height: fit-content;
     color: rgb(163, 153, 207);
-    padding: 10px;
+    padding: 6px 8px;
     -webkit-transition-duration: 0.3s;
     transition-duration: 0.3s;
 
