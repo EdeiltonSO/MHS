@@ -7,9 +7,9 @@ import Outputs from "./components/Outputs";
 
 class App extends Component {
   state = {
-    amplitude: 120,
-    periodo: 0.0001,
-    massa: 7200000000000000000000000000,
+    amplitude: 20,
+    periodo: 15,
+    massa: 1,
     fase: 0
   };
 
