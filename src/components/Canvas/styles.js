@@ -2,7 +2,8 @@ import styled from "styled-components";
 
 export const Container = styled.div`
   background: rgba(0, 0, 100, 0.5);
-  height: 300px;
+  min-height: 300px;
+  max-height: 300px;
   /* border: 1px solid #f00; */
 
   canvas {
