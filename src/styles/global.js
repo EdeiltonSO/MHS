@@ -18,7 +18,7 @@ const GlobalStyle = createGlobalStyle`
 
   body {
     font-family: 'Calibri', sans-serif;
-    background: #EAEAEA;
+    background: rgb(25, 23, 37);
 
     h1, h2 {
       font-family: 'Segoe UI Light', sans-serif;

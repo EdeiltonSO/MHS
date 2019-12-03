@@ -19,6 +19,14 @@ export default class Canvas extends Component {
       requestAnimationFrame(animate);
       ctx.clearRect(0, 0, width, height);
       ctx.beginPath();
+
+      // Estilização ---------
+      ctx.fillStyle = "rgb(25, 23, 37)";
+      ctx.fillRect(0, 0, width, height);
+      ctx.strokeStyle = "rgb(201, 94, 67)";
+      ctx.lineWidth = 2;
+      // ---------------------
+
       ctx.moveTo(0, height / 2);
       for (let i = 0; i < width; i++) {
         ctx.lineTo(

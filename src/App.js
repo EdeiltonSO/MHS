@@ -7,10 +7,10 @@ import Outputs from "./components/Outputs";
 
 class App extends Component {
   state = {
-    amplitude: 1,
-    periodo: 1,
-    massa: 1,
-    fase: 1
+    amplitude: 120,
+    periodo: 0.0001,
+    massa: 7200000000000000000000000000,
+    fase: 0
   };
 
   render() {
@@ -55,7 +55,7 @@ class App extends Component {
                   <input
                     id="periodo"
                     type="number"
-                    min="0.00001"
+                    min="0.0001"
                     max="500"
                     placeholder="seg"
                     value={this.state.periodo}
