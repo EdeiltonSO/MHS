@@ -7,40 +7,41 @@ export default class Outputs extends Component {
     return (
       <Container>
         <h2>Saídas</h2>
-        <div class="field">
-          <span class="name">Frequência:</span>{" "}
+        <div className="field">
+          <span className="name">Frequência:</span>{" "}
           <p>
-            {this.props.freq.toFixed(4)} <span class="unid">Hz</span>
+            {this.props.freq.toFixed(4)} <span className="unid">Hz</span>
           </p>
         </div>
-        <div class="field">
-          <span class="name">Constante da Mola:</span>{" "}
+        <div className="field">
+          <span className="name">Constante da Mola:</span>{" "}
           <p>
-            {this.props.mola.toFixed(4)} <span class="unid">N/m²</span>
+            {this.props.mola.toFixed(4)} <span className="unid">N/m²</span>
           </p>
         </div>
-        <div class="field">
-          <span class="name">Frequência Angular:</span>{" "}
+        <div className="field">
+          <span className="name">Frequência Angular:</span>{" "}
           <p>
-            {this.props.freqAngular.toFixed(4)} <span class="unid">rad/s</span>
+            {this.props.freqAngular.toFixed(4)}{" "}
+            <span className="unid">rad/s</span>
           </p>
         </div>
-        <div class="field">
-          <span class="name">Velocidade Máxima:</span>{" "}
+        <div className="field">
+          <span className="name">Velocidade Máxima:</span>{" "}
           <p>
-            {this.props.velocMax.toFixed(4)} <span class="unid">m/s</span>
+            {this.props.velocMax.toFixed(4)} <span className="unid">m/s</span>
           </p>
         </div>
-        <div class="field">
-          <span class="name">Aceleração Máxima:</span>{" "}
+        <div className="field">
+          <span className="name">Aceleração Máxima:</span>{" "}
           <p>
-            {this.props.acelerMax.toFixed(4)} <span class="unid">m/s²</span>
+            {this.props.acelerMax.toFixed(4)} <span className="unid">m/s²</span>
           </p>
         </div>
-        <div class="field">
-          <span class="name">Energia Mecânica:</span>{" "}
+        <div className="field">
+          <span className="name">Energia Mecânica:</span>{" "}
           <p>
-            {this.props.energiaMec.toFixed(4)} <span class="unid">J</span>
+            {this.props.energiaMec.toFixed(4)} <span className="unid">J</span>
           </p>
         </div>
       </Container>

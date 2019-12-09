@@ -14,7 +14,7 @@ export const Viewport = styled.div`
 export const Wrapper = styled.div`
   width: 100%;
   display: contents;
-  min-height: 100%;
+  min-height: fit-content;
   /* border: 1px solid #f00; */
   /* padding: 10px; */
   /* background: rgba(0, 0, 0, 0.6); */
@@ -68,7 +68,7 @@ export const ContainerInputs = styled.div`
     }
 
     p {
-      line-height: 40px;
+      line-height: 36px;
       color: rgb(163, 153, 207);
       width: 60%;
       /* background: rgba(0, 255, 0, 0.5); */
@@ -79,17 +79,15 @@ export const ContainerInputs = styled.div`
     }
 
     p.sup {
-      line-height: 30px; /* sempre 10 px a menos */
     }
 
     input {
       /* border-radius: 5px; */
       padding: 3px 5px;
       border: none;
-      font-size: 16px;
       border-bottom: 1px solid rgb(96, 88, 132);
       color: rgb(163, 153, 207);
-      width: 80px;
+      width: 120px;
       height: min-content;
       background: none;
     }
@@ -101,6 +99,23 @@ export const ContainerInputs = styled.div`
         css`
           border: 1.5px solid #f95e5a;
         `}
+    }
+
+    select {
+      height: fit-content;
+      background: rgb(40, 37, 53);
+      color: rgb(163, 153, 207);
+      border: none;
+      border-bottom: 1px solid rgb(96, 88, 132);
+      width: 120px;
+      padding: 3px 5px;
+
+      &:hover {
+        background: rgb(25, 23, 37);
+      }
+
+      option {
+      }
     }
   }
 

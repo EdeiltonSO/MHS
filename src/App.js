@@ -16,7 +16,8 @@ class App extends Component {
     amplitude: 20,
     periodo: 15,
     massa: 1,
-    fase: 0
+    fase: 0,
+    waveType: "posicao"
   };
 
   render() {
@@ -38,7 +39,7 @@ class App extends Component {
               <ContainerInputs>
                 <h2>Entradas</h2>
                 <Fragment>
-                  <div class="field">
+                  <div className="field">
                     <p>
                       Amplitude <span>≥ -120 e ≤ 120</span>
                     </p>
@@ -56,7 +57,7 @@ class App extends Component {
                       }
                     />
                   </div>
-                  <div class="field">
+                  <div className="field">
                     <p>
                       Período <span>> 0 e ≤ 500</span>
                     </p>
@@ -74,7 +75,7 @@ class App extends Component {
                       }
                     />
                   </div>
-                  <div class="field">
+                  <div className="field">
                     <p>
                       Massa <span>≥ 0</span>
                     </p>
@@ -91,8 +92,8 @@ class App extends Component {
                       }
                     />
                   </div>
-                  <div class="field">
-                    <p class="sup">
+                  <div className="field">
+                    <p className="sup">
                       Fase{" "}
                       <span>
                         ≥ 0 e ≤ 1x10<sup>14</sup>
@@ -111,6 +112,26 @@ class App extends Component {
                         })
                       }
                     />
+                  </div>
+                  <div className="field">
+                    <p>
+                      Tipo de onda <span>[alguma info extra?]</span>
+                    </p>
+                    <select
+                      id="wave-type"
+                      value={this.state.waveType}
+                      onChange={e =>
+                        this.setState({
+                          waveType: e.target.value
+                        })
+                      }
+                    >
+                      <option value="posicao">Posição</option>
+                      <option value="velocidade">Velocidade</option>
+                      <option value="aceleracao">Aceleração</option>
+                      <option value="cinetica">Energia Cinética</option>
+                      <option value="potencial">Energia Potencial</option>
+                    </select>
                   </div>
                 </Fragment>
               </ContainerInputs>{" "}
@@ -131,7 +152,11 @@ class App extends Component {
             <Canvas
               amplitude={this.state.amplitude}
               periodo={this.state.periodo}
+              massa={this.state.massa}
               fase={this.state.fase}
+              waveType={this.state.waveType}
+              mola={mola}
+              freqAngular={freqAngular}
             />
           </Wrapper>
         </Viewport>
