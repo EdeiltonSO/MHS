@@ -40,9 +40,11 @@ export default class Canvas extends Component {
           ctx.lineTo(
             i,
             height / 2 +
-              this.props.amplitude *
+              -(
+                this.props.amplitude *
                 this.props.freqAngular *
-                Math.sin(this.props.freqAngular * i + this.props.fase)
+                Math.sin(this.props.freqAngular * i - this.props.fase)
+              )
           );
         }
         // ACELERAÇÃO ######################################################################
@@ -59,9 +61,11 @@ export default class Canvas extends Component {
           ctx.lineTo(
             i,
             height / 2 +
-              this.props.amplitude *
+              -(
+                this.props.amplitude *
                 Math.pow(this.props.freqAngular, 2) *
-                Math.cos(this.props.freqAngular * i + this.props.fase)
+                Math.cos(this.props.freqAngular * i - this.props.fase)
+              )
           );
         }
         // CINÉTICA ######################################################################
@@ -77,13 +81,14 @@ export default class Canvas extends Component {
         for (let i = 0; i < width; i++) {
           ctx.lineTo(
             i,
-            height / 2 +
+            height / 2 -
+              Math.pow(this.props.amplitude, 2) / 23 +
               0.5 *
                 Math.pow(this.props.amplitude, 2) *
                 Math.pow(this.props.freqAngular, 2) *
                 this.props.massa *
                 Math.pow(
-                  Math.sin(this.props.freqAngular * i + this.props.fase),
+                  Math.sin(this.props.freqAngular * i - this.props.fase),
                   2
                 )
           );
@@ -101,12 +106,13 @@ export default class Canvas extends Component {
         for (let i = 0; i < width; i++) {
           ctx.lineTo(
             i,
-            height / 2 +
+            height / 2 -
+              Math.pow(this.props.amplitude, 2) / 23 +
               0.5 *
                 Math.pow(this.props.amplitude, 2) *
                 this.props.mola *
                 Math.pow(
-                  Math.cos(this.props.freqAngular * i + this.props.fase),
+                  Math.cos(this.props.freqAngular * i - this.props.fase),
                   2
                 )
           );
