@@ -114,9 +114,7 @@ class App extends Component {
                     />
                   </div>
                   <div className="field">
-                    <p>
-                      Tipo de onda <span>[alguma info extra?]</span>
-                    </p>
+                    <p>Tipo de onda</p>
                     <select
                       id="wave-type"
                       value={this.state.waveType}

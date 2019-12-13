@@ -7,7 +7,6 @@ export const Viewport = styled.div`
   top: 0;
   left: calc(50% - 900px / 2);
   display: flex;
-  z-index: 1;
 
   background: rgba(75, 65, 121, 0.7);
   padding: 40px;
