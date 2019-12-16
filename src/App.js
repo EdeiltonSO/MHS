@@ -59,13 +59,13 @@ class App extends Component {
                   </div>
                   <div className="field">
                     <p>
-                      Período <span>> 0 e ≤ 500</span>
+                      Período <span>> 0 e ≤ 100</span>
                     </p>
                     <input
                       id="periodo"
                       type="number"
-                      min="0.0001"
-                      max="500"
+                      min="0.001"
+                      max="100"
                       placeholder="s"
                       value={this.state.periodo}
                       onChange={e =>

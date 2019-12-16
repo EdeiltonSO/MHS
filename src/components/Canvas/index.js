@@ -42,8 +42,11 @@ export default class Canvas extends Component {
             height / 2 +
               -(
                 this.props.amplitude *
-                this.props.freqAngular *
-                Math.sin(this.props.freqAngular * i - this.props.fase)
+                (2 * Math.PI * (1 / (this.props.periodo * 10))) *
+                Math.sin(
+                  2 * Math.PI * (1 / (this.props.periodo * 10)) * i -
+                    this.props.fase
+                )
               )
           );
         }
@@ -63,8 +66,11 @@ export default class Canvas extends Component {
             height / 2 +
               -(
                 this.props.amplitude *
-                Math.pow(this.props.freqAngular, 2) *
-                Math.cos(this.props.freqAngular * i - this.props.fase)
+                Math.pow(2 * Math.PI * (1 / (this.props.periodo * 10)), 2) *
+                Math.cos(
+                  2 * Math.PI * (1 / (this.props.periodo * 10)) * i -
+                    this.props.fase
+                )
               )
           );
         }
@@ -112,7 +118,10 @@ export default class Canvas extends Component {
                 Math.pow(this.props.amplitude, 2) *
                 this.props.mola *
                 Math.pow(
-                  Math.cos(this.props.freqAngular * i - this.props.fase),
+                  Math.cos(
+                    2 * Math.PI * (1 / (this.props.periodo * 10)) * i -
+                      this.props.fase
+                  ),
                   2
                 )
           );
@@ -135,7 +144,8 @@ export default class Canvas extends Component {
             height / 2 +
               this.props.amplitude *
                 Math.cos(
-                  2 * Math.PI * (1 / this.props.periodo) * i - this.props.fase
+                  2 * Math.PI * (1 / (this.props.periodo * 10)) * i -
+                    this.props.fase
                 )
           );
         }
