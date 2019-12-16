@@ -127,8 +127,6 @@ class App extends Component {
                       <option value="posicao">Posição</option>
                       <option value="velocidade">Velocidade</option>
                       <option value="aceleracao">Aceleração</option>
-                      <option value="cinetica">Energia Cinética</option>
-                      <option value="potencial">Energia Potencial</option>
                     </select>
                   </div>
                 </Fragment>
