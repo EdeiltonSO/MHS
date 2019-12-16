@@ -24,9 +24,9 @@ class App extends Component {
     const freq = 1 / this.state.periodo;
     const freqAngular = 2 * Math.PI * freq;
     const mola = this.state.massa * Math.pow(freqAngular, 2);
-    const velocMax = (this.state.amplitude / 100) * freqAngular;
-    const acelerMax = (this.state.amplitude / 100) * Math.pow(freqAngular, 2);
-    const energiaMec = (mola * Math.pow(this.state.amplitude / 100, 2)) / 2;
+    const velocMax = this.state.amplitude * freqAngular;
+    const acelerMax = this.state.amplitude * Math.pow(freqAngular, 2);
+    const energiaMec = (mola * Math.pow(this.state.amplitude, 2)) / 2;
 
     return (
       <div className="App">
