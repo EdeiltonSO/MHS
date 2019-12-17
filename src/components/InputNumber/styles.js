@@ -5,7 +5,6 @@ export const Container = styled.div`
   color: rgb(163, 153, 207);
   width: 120px;
   height: 25px;
-  /* border: 1px solid #ff0000; */
   display: flex;
   flex-direction: row;
   justify-content: flex-end;
@@ -20,7 +19,7 @@ export const Container = styled.div`
 
   input[type="number"]::-webkit-inner-spin-button,
   input[type="number"]::-webkit-outer-spin-button {
-    -webkit-appearance: none;
+    display: none;
     margin: 0;
   }
 
