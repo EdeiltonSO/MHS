@@ -1,6 +1,7 @@
 import React, { Component, Fragment } from "react";
 import Header from "../src/components/Header";
 import Canvas from "../src/components/Canvas";
+import InputNumber from "../src/components/InputNumber";
 import {
   Viewport,
   Wrapper,
@@ -18,6 +19,81 @@ class App extends Component {
     massa: 1,
     fase: 0,
     waveType: "posicao"
+  };
+
+  // AMPLITUDE ######################################
+  oneLessClickAmplitude = min => {
+    const atual = this.state.amplitude;
+    const novo = atual - 1;
+    novo >= min &&
+      this.setState({
+        amplitude: novo
+      });
+  };
+
+  oneMoreClickAmplitude = max => {
+    const atual = this.state.amplitude;
+    const novo = atual - -1;
+    novo <= max &&
+      this.setState({
+        amplitude: novo
+      });
+  };
+
+  // PERÍODO ######################################
+  oneLessClickPeriodo = min => {
+    const atual = this.state.periodo;
+    const novo = atual - 1;
+    novo >= min &&
+      this.setState({
+        periodo: novo
+      });
+  };
+
+  oneMoreClickPeriodo = max => {
+    const atual = this.state.periodo;
+    const novo = atual - -1;
+    novo <= max &&
+      this.setState({
+        periodo: novo
+      });
+  };
+
+  // MASSA ######################################
+  oneLessClickMassa = min => {
+    const atual = this.state.massa;
+    const novo = atual - 1;
+    novo >= min &&
+      this.setState({
+        massa: novo
+      });
+  };
+
+  oneMoreClickMassa = () => {
+    const atual = this.state.massa;
+    const novo = atual - -1;
+    this.setState({
+      massa: novo
+    });
+  };
+
+  // FASE ######################################
+  oneLessClickFase = min => {
+    const atual = this.state.fase;
+    const novo = atual - 1;
+    novo >= min &&
+      this.setState({
+        fase: novo
+      });
+  };
+
+  oneMoreClickFase = max => {
+    const atual = this.state.fase;
+    const novo = atual - -1;
+    novo <= max &&
+      this.setState({
+        fase: novo
+      });
   };
 
   render() {
@@ -43,7 +119,7 @@ class App extends Component {
                     <p>
                       Amplitude <span>≥ -120 e ≤ 120</span>
                     </p>
-                    <input
+                    <InputNumber
                       id="amplitude"
                       type="number"
                       min="-120"
@@ -55,13 +131,15 @@ class App extends Component {
                           amplitude: e.target.value
                         })
                       }
+                      oneLessClick={this.oneLessClickAmplitude}
+                      oneMoreClick={this.oneMoreClickAmplitude}
                     />
                   </div>
                   <div className="field">
                     <p>
                       Período <span>> 0 e ≤ 100</span>
                     </p>
-                    <input
+                    <InputNumber
                       id="periodo"
                       type="number"
                       min="0.001"
@@ -73,13 +151,15 @@ class App extends Component {
                           periodo: e.target.value
                         })
                       }
+                      oneLessClick={this.oneLessClickPeriodo}
+                      oneMoreClick={this.oneMoreClickPeriodo}
                     />
                   </div>
                   <div className="field">
                     <p>
                       Massa <span>≥ 0</span>
                     </p>
-                    <input
+                    <InputNumber
                       id="massa"
                       type="number"
                       min="0"
@@ -90,6 +170,8 @@ class App extends Component {
                           massa: e.target.value
                         })
                       }
+                      oneLessClick={this.oneLessClickMassa}
+                      oneMoreClick={this.oneMoreClickMassa}
                     />
                   </div>
                   <div className="field">
@@ -99,7 +181,7 @@ class App extends Component {
                         ≥ 0 e ≤ 1x10<sup>14</sup>
                       </span>
                     </p>
-                    <input
+                    <InputNumber
                       id="fase"
                       type="number"
                       min="0"
@@ -111,6 +193,8 @@ class App extends Component {
                           fase: e.target.value
                         })
                       }
+                      oneLessClick={this.oneLessClickFase}
+                      oneMoreClick={this.oneMoreClickFase}
                     />
                   </div>
                   <div className="field">

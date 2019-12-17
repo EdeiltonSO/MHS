@@ -83,11 +83,8 @@ export const ContainerInputs = styled.div`
       }
     }
 
-    p.sup {
-    }
-
+/*
     input {
-      /* border-radius: 5px; */
       padding: 3px 5px;
       border: none;
       border-bottom: 1px solid rgb(96, 88, 132);
@@ -105,9 +102,10 @@ export const ContainerInputs = styled.div`
           border: 1.5px solid #f95e5a;
         `}
     }
+    */
 
     select {
-      height: fit-content;
+      height: 25px;
       background: rgb(40, 37, 53);
       color: rgb(163, 153, 207);
       border: none;
@@ -118,15 +116,6 @@ export const ContainerInputs = styled.div`
       &:hover {
         background: rgb(25, 23, 37);
       }
-
-      option {
-      }
     }
   }
-
-  /* Solução provisória para deixar as divs de input e output com mesma altura */
-  /*div#lastField {
-    border: 1px solid #f00; 
-    margin-bottom: 35px;
-  }*/
 `;
