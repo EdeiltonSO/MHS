@@ -6,33 +6,29 @@ export const Container = styled.div`
   width: 120px;
   height: 25px;
   display: flex;
+
   flex-direction: row;
-  justify-content: flex-end;
-
-  input {
-    width: 100%;
-    color: rgb(163, 153, 207);
-    border: none;
-    background: none;
-    padding: 5px;
-  }
-
-  input[type="number"]::-webkit-inner-spin-button,
-  input[type="number"]::-webkit-outer-spin-button {
-    display: none;
-    margin: 0;
-  }
-
-  button {
-    width: 30px;
-    height: 25px;
-    margin-top: -2px;
-    background: none;
-    color: rgb(163, 153, 207);
-    border: none;
-    font-weight: bolder;
-    font-size: 20px;
-  }
+  justify-content: space-between;
 `;
 
-export const Input = styled.input``;
+export const Input = styled.input`
+  width: 60%;
+  color: rgb(163, 153, 207);
+  border: none;
+  background: none;
+  box-shadow: none;
+  padding: 5px;
+  appearance: none;
+  -moz-appearance: textfield;
+`;
+
+export const OneMoreButton = styled.button`
+  width: 20%;
+  height: 25px;
+  margin-top: -2px;
+  background: none;
+  color: rgb(163, 153, 207);
+  border: none;
+  font-weight: bolder;
+  font-size: 20px;
+`;

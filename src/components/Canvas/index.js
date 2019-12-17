@@ -42,8 +42,6 @@ export default class Canvas extends Component {
       // VELOCIDADE ######################################################################
       if (this.props.waveType === "velocidade") {
         // Estilização ---------
-        //ctx.fillStyle = "rgb(25, 23, 37)";
-        //ctx.fillRect(0, 0, width, height);
         ctx.strokeStyle = "rgb(204, 51, 153)";
         ctx.lineWidth = 2;
         // ---------------------
@@ -66,8 +64,6 @@ export default class Canvas extends Component {
         // ACELERAÇÃO ######################################################################
       } else if (this.props.waveType === "aceleracao") {
         // Estilização ---------
-        //ctx.fillStyle = "rgb(25, 23, 37)";
-        //ctx.fillRect(0, 0, width, height);
         ctx.strokeStyle = "rgb(0, 176, 80)";
         ctx.lineWidth = 2;
         // ---------------------
@@ -91,8 +87,6 @@ export default class Canvas extends Component {
       else {
         ctx.moveTo(0, height / 2);
         // Estilização ---------
-        // ctx.fillStyle = "rgb(25, 23, 37)";
-        // ctx.fillRect(0, 0, width, height);
         ctx.strokeStyle = "rgb(201, 94, 67)";
         ctx.lineWidth = 2;
         // ---------------------
@@ -113,8 +107,6 @@ export default class Canvas extends Component {
       ctx.stroke();
       ctx.closePath();
     };
-
-    console.log("> " + this.props.waveType);
     animate();
   }
   render() {

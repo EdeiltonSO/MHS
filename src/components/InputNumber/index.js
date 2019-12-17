@@ -1,6 +1,6 @@
 import React from "react";
 
-import { Container } from "./styles";
+import { Container, Input, OneMoreButton } from "./styles";
 
 const InputNumber = ({
   id,
@@ -14,7 +14,7 @@ const InputNumber = ({
   oneMoreClick
 }) => (
   <Container>
-    <input
+    <Input
       id={id}
       type={type}
       min={min}
@@ -23,12 +23,12 @@ const InputNumber = ({
       value={value}
       onChange={onChange}
     />
-    <button onClick={() => oneLessClick(min)} className="qtdButton">
+    <OneMoreButton onClick={() => oneLessClick(min)} className="qtdButton">
       -
-    </button>
-    <button onClick={() => oneMoreClick(max)} className="qtdButton">
+    </OneMoreButton>
+    <OneMoreButton onClick={() => oneMoreClick(max)} className="qtdButton">
       +
-    </button>
+    </OneMoreButton>
   </Container>
 );
 

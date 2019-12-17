@@ -20,18 +20,13 @@ export const Wrapper = styled.div`
   width: 100%;
   display: contents;
   min-height: fit-content;
-  /* border: 1px solid #f00; */
-  /* padding: 10px; */
-  /* background: rgba(0, 0, 0, 0.6); */
 `;
 
 export const DataView = styled.div`
   width: 100%;
   height: 250px;
-  /* border: 1px solid #0d0; */
   flex-direction: row;
   display: flex;
-  /* padding: 5px; */
 `;
 
 export const ContainerInputs = styled.div`
@@ -40,12 +35,8 @@ export const ContainerInputs = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: stretch;
-  /* margin: 0px 5px 0px 0px; */
-  /* border-right: 1px solid rgb(96, 88, 132); */
   padding: 20px 10px 20px 10px;
   background: rgb(40, 37, 53);
-  /* box-shadow: 0px 0px 7px rgba(0, 0, 0, 0.2); */
-  /* border-radius: 5px; */
 
   h2 {
     color: rgb(134, 120, 194);
@@ -76,7 +67,6 @@ export const ContainerInputs = styled.div`
       line-height: 36px;
       color: rgb(163, 153, 207);
       width: 60%;
-      /* background: rgba(0, 255, 0, 0.5); */
 
       span {
         color: rgb(96, 88, 132);
