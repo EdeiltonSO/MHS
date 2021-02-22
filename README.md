@@ -10,4 +10,4 @@
 
     3.2. `yarn start` ou `npm start`;
 
-Uma nova guia será aberta no navegador e a aplicação será exibida no endereço `http://localhost:3000`. Caso necessário, essa configuração pode ser alterada no arquivo `package.json`.
+Uma nova guia será aberta no navegador e a aplicação será exibida no endereço `http://localhost:3000`.
